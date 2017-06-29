@@ -63,7 +63,7 @@ Requires:       python-stevedore
 Summary:        %{sname} documentation
 
 BuildRequires:  python-sphinx
-BuildRequires:  python-oslo-sphinx
+BuildRequires:  python-openstackdocstheme
 
 %description -n %{name}-doc
 %{common_desc}
