@@ -132,7 +132,7 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 
 
 %check
-ostestr --whitelist-file test-whitelist.txt
+ostestr
 
 %if 0%{?with_python3}
 rm -fr .testrepository
