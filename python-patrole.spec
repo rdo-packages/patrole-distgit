@@ -132,7 +132,7 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 
 
 %check
-ostestr --whitelist-file test-whitelist.txt
+ostestr
 
 %if 0%{?with_python3}
 rm -fr .testrepository
@@ -160,3 +160,4 @@ ostestr-3 --whitelist-file test-whitelist.txt
 %endif
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/patrole/commit/?id=2af8f554cb6f2d644da8e1656ad8f4613ef0a696
