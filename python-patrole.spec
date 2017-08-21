@@ -160,3 +160,4 @@ ostestr-3 --whitelist-file test-whitelist.txt
 %endif
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/patrole/commit/?id=337e17a2f14e68373a1f19ad7d0e5720c1a7695b
