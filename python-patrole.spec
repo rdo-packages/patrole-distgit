@@ -109,6 +109,10 @@ Requires:       python3-stevedore
 # Remove bundled egg-info
 rm -rf %{sname}.egg-info
 
+# Remove files related to pep8 and hacking
+rm -fr patrole_tempest_plugin/hacking
+rm -fr patrole_tempest_plugin/tests/unit/test_hacking.py
+
 %build
 %if 0%{?with_python3}
 %py3_build
