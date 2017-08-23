@@ -103,6 +103,9 @@ Requires:       python3-stevedore
 %prep
 %autosetup -n %{sname}-%{upstream_version} -S git
 
+# Remove dependency of using pbr-2.0.0
+sed -i 's/pbr>=2.0.0/pbr/g' setup.py
+
 # remove requirements
 %py_req_cleanup
 
