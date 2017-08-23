@@ -47,13 +47,13 @@ BuildRequires:  python-oslo-policy
 BuildRequires:  python-tempest-tests
 BuildRequires:  python-mock
 
-Requires:       python-pbr
+Requires:       python-pbr >= 2.0.0
 Requires:       python-urllib3
-Requires:       python-oslo-log
-Requires:       python-oslo-config
-Requires:       python-oslo-policy
-Requires:       python-tempest-tests
-Requires:       python-stevedore
+Requires:       python-oslo-log >= 3.22.0
+Requires:       python-oslo-config >= 2:4.0.0
+Requires:       python-oslo-policy >= 0.5.0
+Requires:       python-tempest-tests >= 12.1.0
+Requires:       python-stevedore >= 1.20.0
 
 %description -n python2-%{sname}-tests-tempest
 %{common_desc}
