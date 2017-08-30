@@ -17,8 +17,8 @@ deployments with custom roles.
 %endif
 
 Name:           python-%{sname}
-Version:        XXX
-Release:        XXX
+Version:        0.1.0
+Release:        1%{?dist}
 Summary:        Patrole Tempest Plugin
 
 License:        ASL 2.0
@@ -63,7 +63,7 @@ Requires:       python-stevedore >= 1.20.0
 Summary:        %{sname} documentation
 
 BuildRequires:  python-sphinx
-BuildRequires:  python-openstackdocstheme
+BuildRequires:  python-oslo-sphinx
 
 %description -n %{name}-doc
 %{common_desc}
@@ -164,3 +164,5 @@ ostestr-3 --whitelist-file test-whitelist.txt
 %endif
 
 %changelog
+* Wed Aug 30 2017 Chandan Kumar <chkumar@redhat.com> 0.1.0-1
+- Update to 0.1.0
