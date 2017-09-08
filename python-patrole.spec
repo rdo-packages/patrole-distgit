@@ -42,6 +42,7 @@ BuildRequires:  python2-devel
 
 # tests requirements
 BuildRequires:  python-os-testr
+BuildRequires:  python-stestr
 BuildRequires:  python-oslotest
 BuildRequires:  python-oslo-policy
 BuildRequires:  python-tempest-tests
@@ -82,6 +83,7 @@ BuildRequires:  python3-devel
 
 # tests requirements
 BuildRequires:  python3-os-testr
+BuildRequires:  python3-stestr
 BuildRequires:  python3-oslotest
 BuildRequires:  python3-oslo-policy
 BuildRequires:  python3-tempest-tests
