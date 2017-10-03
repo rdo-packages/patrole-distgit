@@ -166,3 +166,4 @@ ostestr-3 --whitelist-file test-whitelist.txt
 %changelog
 * Wed Aug 30 2017 Chandan Kumar <chkumar@redhat.com> 0.1.0-1
 - Update to 0.1.0
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/patrole/commit/?id=7a9b3e27619d16f6ad7c129b08ff9b9fac087b9f
