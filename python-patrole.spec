@@ -136,11 +136,11 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 
 
 %check
-ostestr
+%{__python2} setup.py test
 
 %if 0%{?with_python3}
 rm -fr .testrepository
-ostestr-3 --whitelist-file test-whitelist.txt
+%{__python3} setup.py test
 %endif
 
 %files -n python2-%{sname}-tests-tempest
