@@ -44,7 +44,7 @@ BuildRequires:  python2-devel
 BuildRequires:  python-os-testr
 BuildRequires:  python-oslotest
 BuildRequires:  python-oslo-policy
-BuildRequires:  python-tempest-tests
+BuildRequires:  python-tempest
 BuildRequires:  python-mock
 
 Requires:       python-pbr >= 2.0.0
@@ -52,7 +52,7 @@ Requires:       python-urllib3
 Requires:       python-oslo-log >= 3.22.0
 Requires:       python-oslo-config >= 2:4.0.0
 Requires:       python-oslo-policy >= 1.23.0
-Requires:       python-tempest-tests >= 12.1.0
+Requires:       python-tempest >= 12.1.0
 Requires:       python-stevedore >= 1.20.0
 
 %description -n python2-%{sname}-tests-tempest
@@ -84,7 +84,7 @@ BuildRequires:  python3-devel
 BuildRequires:  python3-os-testr
 BuildRequires:  python3-oslotest
 BuildRequires:  python3-oslo-policy
-BuildRequires:  python3-tempest-tests
+BuildRequires:  python3-tempest
 BuildRequires:  python3-mock
 
 Requires:       python3-pbr
@@ -92,7 +92,7 @@ Requires:       python3-urllib3
 Requires:       python3-oslo-log
 Requires:       python3-oslo-config
 Requires:       python3-oslo-policy
-Requires:       python3-tempest-tests
+Requires:       python3-tempest
 Requires:       python3-stevedore
 
 %description -n python3-%{sname}-tests-tempest
