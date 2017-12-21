@@ -136,11 +136,13 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 
 
 %check
-%{__python2} setup.py test
-
+export OS_TEST_PATH='./patrole_tempest_plugin/tests/unit'
+export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
+export PYTHONPATH=$PWD
+stestr --test-path $OS_TEST_PATH run
 %if 0%{?with_python3}
-rm -fr .testrepository
-%{__python3} setup.py test
+rm -rf .stestr
+stestr-3 --test-path $OS_TEST_PATH run
 %endif
 
 %files -n python2-%{sname}-tests-tempest
