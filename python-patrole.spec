@@ -36,24 +36,24 @@ BuildRequires:  openstack-macros
 Summary:        %{summary}
 %{?python_provide:%python_provide python2-%{sname}-tests-tempest}
 
-BuildRequires:  python-setuptools
-BuildRequires:  python-pbr
+BuildRequires:  python2-setuptools
+BuildRequires:  python2-pbr
 BuildRequires:  python2-devel
 
 # tests requirements
-BuildRequires:  python-os-testr
-BuildRequires:  python-oslotest
-BuildRequires:  python-oslo-policy
-BuildRequires:  python-tempest-tests
-BuildRequires:  python-mock
+BuildRequires:  python2-os-testr
+BuildRequires:  python2-oslotest
+BuildRequires:  python2-oslo-policy
+BuildRequires:  python2-tempest-tests
+BuildRequires:  python2-mock
 
-Requires:       python-pbr >= 2.0.0
-Requires:       python-urllib3
-Requires:       python-oslo-log >= 3.22.0
-Requires:       python-oslo-config >= 2:4.0.0
-Requires:       python-oslo-policy >= 1.23.0
-Requires:       python-tempest-tests >= 12.1.0
-Requires:       python-stevedore >= 1.20.0
+Requires:       python2-pbr >= 2.0.0
+Requires:       python2-urllib3
+Requires:       python2-oslo-log >= 3.30.0
+Requires:       python2-oslo-config >= 2:4.0.0
+Requires:       python2-oslo-policy >= 1.23.0
+Requires:       python2-tempest-tests >= 1:17.2.0
+Requires:       python2-stevedore >= 1.20.0
 
 %description -n python2-%{sname}-tests-tempest
 %{common_desc}
@@ -62,8 +62,8 @@ Requires:       python-stevedore >= 1.20.0
 %package -n %{name}-doc
 Summary:        %{sname} documentation
 
-BuildRequires:  python-sphinx
-BuildRequires:  python-openstackdocstheme
+BuildRequires:  python2-sphinx
+BuildRequires:  python2-openstackdocstheme
 
 %description -n %{name}-doc
 %{common_desc}
@@ -87,13 +87,13 @@ BuildRequires:  python3-oslo-policy
 BuildRequires:  python3-tempest-tests
 BuildRequires:  python3-mock
 
-Requires:       python3-pbr
+Requires:       python3-pbr >= 2.0.0
 Requires:       python3-urllib3
-Requires:       python3-oslo-log
-Requires:       python3-oslo-config
-Requires:       python3-oslo-policy
-Requires:       python3-tempest-tests
-Requires:       python3-stevedore
+Requires:       python3-oslo-log >= 3.30.0
+Requires:       python3-oslo-config >= 2:4.0.0
+Requires:       python3-oslo-policy >= 1.23.0
+Requires:       python3-tempest-tests >= 1:17.2.0
+Requires:       python3-stevedore >= 1.20.0
 
 %description -n python3-%{sname}-tests-tempest
 %{common_desc}
