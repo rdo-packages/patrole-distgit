@@ -17,8 +17,8 @@ deployments with custom roles.
 %endif
 
 Name:           python-%{sname}
-Version:        XXX
-Release:        XXX
+Version:        0.2.0
+Release:        1%{?dist}
 Summary:        Patrole Tempest Plugin
 
 License:        ASL 2.0
@@ -166,3 +166,5 @@ stestr-3 --test-path $OS_TEST_PATH run
 %endif
 
 %changelog
+* Mon Feb 19 2018 Chandan Kumar <chkumar@redhat.com> 0.2.0-1
+- Updated to 0.2.0
