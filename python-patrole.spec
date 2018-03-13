@@ -17,7 +17,7 @@ deployments with custom roles.
 %endif
 
 Name:           python-%{sname}
-Version:        0.2.0
+Version:        0.3.0
 Release:        1%{?dist}
 Summary:        Patrole Tempest Plugin
 
@@ -166,5 +166,8 @@ stestr-3 --test-path $OS_TEST_PATH run
 %endif
 
 %changelog
+* Tue Mar 13 2018 RDO <dev@lists.rdoproject.org> 0.3.0-1
+- Update to 0.3.0
+
 * Mon Feb 19 2018 Chandan Kumar <chkumar@redhat.com> 0.2.0-1
 - Updated to 0.2.0
