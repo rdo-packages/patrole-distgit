@@ -166,3 +166,4 @@ stestr-3 --test-path $OS_TEST_PATH run
 %endif
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/patrole/commit/?id=dd79eb232fe92e6fc208d0fc8d8ca632e31a5f31
