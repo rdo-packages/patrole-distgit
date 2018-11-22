@@ -62,6 +62,7 @@ Requires:       python2-stevedore >= 1.20.0
 Summary:        %{sname} documentation
 
 BuildRequires:  python2-sphinx
+BuildRequires:  python2-sphinxcontrib-apidoc
 BuildRequires:  python2-openstackdocstheme
 
 %description -n %{name}-doc
