@@ -1,0 +1,10 @@
+Code-Review+2: Luigi Toscano <ltoscano@redhat.com>
+Code-Review+2: Javier Peña <jpena@redhat.com>
+Workflow+1: Javier Peña <jpena@redhat.com>
+Code-Review+2: chkumar246 <chkumar@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Tue, 27 Nov 2018 09:06:05 +0000
+Reviewed-on: https://review.rdoproject.org/r/17513
+Project: openstack/patrole-distgit
+Branch: refs/heads/rpm-master
