@@ -70,6 +70,7 @@ Summary:        %{sname} documentation
 
 BuildRequires:  python%{pyver}-sphinx
 BuildRequires:  python%{pyver}-sphinxcontrib-apidoc
+BuildRequires:  python%{pyver}-sphinxcontrib-rsvgconverter
 BuildRequires:  python%{pyver}-openstackdocstheme
 
 %description -n %{name}-doc
