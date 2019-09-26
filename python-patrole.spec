@@ -57,7 +57,7 @@ BuildRequires:  python%{pyver}-mock
 Requires:       python%{pyver}-pbr >= 3.1.1
 Requires:       python%{pyver}-oslo-log >= 3.36.0
 Requires:       python%{pyver}-oslo-config >= 2:5.2.0
-Requires:       python%{pyver}-oslo-policy >= 1.23.0
+Requires:       python%{pyver}-oslo-policy >= 1.30.0
 Requires:       python%{pyver}-tempest-tests >= 1:18.0.0
 Requires:       python%{pyver}-stevedore >= 1.20.0
 
