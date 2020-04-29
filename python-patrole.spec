@@ -1,14 +1,3 @@
-# Macros for py2/py3 compatibility
-%if 0%{?fedora} || 0%{?rhel} > 7
-%global pyver %{python3_pkgversion}
-%else
-%global pyver 2
-%endif
-%global pyver_bin python%{pyver}
-%global pyver_sitelib %python%{pyver}_sitelib
-%global pyver_install %py%{pyver}_install
-%global pyver_build %py%{pyver}_build
-# End of macros for py2/py3 compatibility
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %global sname patrole
@@ -39,39 +28,39 @@ BuildRequires:  openstack-macros
 %description
 %{common_desc}
 
-%package -n     python%{pyver}-%{sname}-tests-tempest
+%package -n     python3-%{sname}-tests-tempest
 Summary:        %{summary}
-%{?python_provide:%python_provide python%{pyver}-%{sname}-tests-tempest}
+%{?python_provide:%python_provide python3-%{sname}-tests-tempest}
 
-BuildRequires:  python%{pyver}-setuptools
-BuildRequires:  python%{pyver}-pbr
-BuildRequires:  python%{pyver}-devel
+BuildRequires:  python3-setuptools
+BuildRequires:  python3-pbr
+BuildRequires:  python3-devel
 
 # tests requirements
-BuildRequires:  python%{pyver}-os-testr
-BuildRequires:  python%{pyver}-oslotest
-BuildRequires:  python%{pyver}-oslo-policy
-BuildRequires:  python%{pyver}-tempest-tests
-BuildRequires:  python%{pyver}-mock
+BuildRequires:  python3-os-testr
+BuildRequires:  python3-oslotest
+BuildRequires:  python3-oslo-policy
+BuildRequires:  python3-tempest-tests
+BuildRequires:  python3-mock
 
-Requires:       python%{pyver}-pbr >= 3.1.1
-Requires:       python%{pyver}-oslo-log >= 3.36.0
-Requires:       python%{pyver}-oslo-config >= 2:5.2.0
-Requires:       python%{pyver}-oslo-policy >= 1.30.0
-Requires:       python%{pyver}-tempest-tests >= 1:18.0.0
-Requires:       python%{pyver}-stevedore >= 1.20.0
+Requires:       python3-pbr >= 3.1.1
+Requires:       python3-oslo-log >= 3.36.0
+Requires:       python3-oslo-config >= 2:5.2.0
+Requires:       python3-oslo-policy >= 1.30.0
+Requires:       python3-tempest-tests >= 1:18.0.0
+Requires:       python3-stevedore >= 1.20.0
 
-%description -n python%{pyver}-%{sname}-tests-tempest
+%description -n python3-%{sname}-tests-tempest
 %{common_desc}
 
 %if 0%{?with_doc}
 %package -n %{name}-doc
 Summary:        %{sname} documentation
 
-BuildRequires:  python%{pyver}-sphinx
-BuildRequires:  python%{pyver}-sphinxcontrib-apidoc
-BuildRequires:  python%{pyver}-sphinxcontrib-rsvgconverter
-BuildRequires:  python%{pyver}-openstackdocstheme
+BuildRequires:  python3-sphinx
+BuildRequires:  python3-sphinxcontrib-apidoc
+BuildRequires:  python3-sphinxcontrib-rsvgconverter
+BuildRequires:  python3-openstackdocstheme
 
 %description -n %{name}-doc
 %{common_desc}
@@ -93,32 +82,32 @@ rm -fr patrole_tempest_plugin/hacking
 rm -fr patrole_tempest_plugin/tests/unit/test_hacking.py
 
 %build
-%{pyver_build}
+%{py3_build}
 
 # Generate Docs
 %if 0%{?with_doc}
 export PYTHONPATH=$PWD
-sphinx-build-%{pyver} -W -b html doc/source doc/build/html
+sphinx-build -W -b html doc/source doc/build/html
 # remove the sphinx build leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %install
-%{pyver_install}
+%{py3_install}
 
 
 %check
 export OS_TEST_PATH='./patrole_tempest_plugin/tests/unit'
 export PATH=$PATH:$RPM_BUILD_ROOT/usr/bin
 export PYTHONPATH=$PWD
-export PYTHON=%{pyver_bin}
-stestr-%{pyver} --test-path $OS_TEST_PATH run
+export PYTHON=%{__python3}
+stestr --test-path $OS_TEST_PATH run
 
-%files -n python%{pyver}-%{sname}-tests-tempest
+%files -n python3-%{sname}-tests-tempest
 %license LICENSE
 %doc README.rst
-%{pyver_sitelib}/%{pname}
-%{pyver_sitelib}/%{sname}-*-py?.?.egg-info
+%{python3_sitelib}/%{pname}
+%{python3_sitelib}/%{sname}-*-py?.?.egg-info
 
 %if 0%{?with_doc}
 %files -n %{name}-doc
