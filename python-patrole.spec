@@ -107,7 +107,7 @@ stestr --test-path $OS_TEST_PATH run
 %license LICENSE
 %doc README.rst
 %{python3_sitelib}/%{pname}
-%{python3_sitelib}/%{sname}-*-py?.?.egg-info
+%{python3_sitelib}/%{sname}-*-py%{python3_version}.egg-info
 
 %if 0%{?with_doc}
 %files -n %{name}-doc
