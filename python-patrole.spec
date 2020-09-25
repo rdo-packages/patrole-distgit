@@ -13,8 +13,8 @@ to those APIs. This is critical to ensure security, especially in large \
 deployments with custom roles.
 
 Name:           python-%{sname}
-Version:        XXX
-Release:        XXX
+Version:        0.10.0
+Release:        1%{?dist}
 Summary:        Patrole Tempest Plugin
 
 License:        ASL 2.0
@@ -116,3 +116,6 @@ stestr --test-path $OS_TEST_PATH run
 %endif
 
 %changelog
+* Fri Sep 25 2020 RDO <dev@lists.rdoproject.org> 0.10.0-1
+- Update to 0.10.0
+
