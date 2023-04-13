@@ -138,3 +138,4 @@ stestr --test-path $OS_TEST_PATH run
 * Fri Sep 25 2020 RDO <dev@lists.rdoproject.org> 0.10.0-1
 - Update to 0.10.0
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/patrole/commit/b540700061b9ef415b9aea494c765ad43d75fee2
