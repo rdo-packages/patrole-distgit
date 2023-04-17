@@ -52,6 +52,24 @@
       "parentUuid": "c67d81ca_5c9ba982",
       "revId": "fe36dbdc30e49394290d3f5e8043d345e8c47a96",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4fb904ef_a8eb6624",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-04-17T07:33:07Z",
+      "side": 1,
+      "message": "python-patrole is retired now",
+      "parentUuid": "d32ca413_6308280c",
+      "revId": "fe36dbdc30e49394290d3f5e8043d345e8c47a96",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
